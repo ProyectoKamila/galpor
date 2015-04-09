@@ -33,18 +33,3 @@
 	</div>
 </header>
 <div class="clearfix"></div>	
-
-<div class="container-fluid content-slider">
-	<div class="row">
-		<div class="col-lg-12 col-md-12">
-			<div class="slider">
-	<ul id="slider1">
-		<li style="background:url(<?php bloginfo('template_url');?>/images/banner/inicio-1.jpg) top center no-repeat; background-size:cover;"></li>
-		<li style="background:url(<?php bloginfo('template_url');?>/images/banner/inicio-1.jpg) top center no-repeat; background-size:cover;"></li>
-		<li style="background:url(<?php bloginfo('template_url');?>/images/banner/inicio-1.jpg) top center no-repeat; background-size:cover;"></li>									
-		<li style="background:url(<?php bloginfo('template_url');?>/images/banner/inicio-1.jpg) top center no-repeat; background-size:cover;"></li>			
-	</ul>
-</div>
-		</div>
-	</div>
-</div>
