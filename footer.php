@@ -1,7 +1,8 @@
 <footer>
     <div class="container">
         <div class="row">
-            <div class="col-lg-3 col-md-3 col-lg-offset-9 col-md-offset-9">
+            <div class="col-lg-6 col-md-3 col-lg-offset-3 col-md-offset-3"></div>
+            <div class="col-lg-3 col-md-3">
                 <div class="formulario">
                     <p>¿Quieres contactarnos? <br>  Envíenos sus dudas ó sugerencias</p>
                     <form action="">

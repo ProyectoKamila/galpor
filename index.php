@@ -68,7 +68,18 @@
             </div>
 <?php
 $i = 1;
-$var = query_posts(array('post_type' => 'galeria', 'posts_per_page' => 9));
+//$var = query_posts(array('post_type' => 'galeria','tipo' => 'conocenos','posts_per_page' => 9));
+$var = query_posts(array('post_type' => 'galeria','posts_per_page' => 9,
+    'tax_query' => array(
+        'relation' => 'AND',
+		array(
+			'taxonomy' => 'tipo',
+			'field' => 'id',
+			'terms' => array( 8 ),
+			'operator' => 'NOT IN'
+		)
+    )   
+    ));
 ?>
             <?php while (have_posts()) {
                 the_post(); ?>

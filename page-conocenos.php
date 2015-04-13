@@ -46,18 +46,18 @@
                         <div class="col-lg-4 col-md-4 bordered"><h2 onclick="show('vision');">VISI&Oacute;N</h2></div>
                         <div class="col-lg-4 col-md-4 bordered"><h2 onclick="show('valores');">VALORES</h2></div>
                         <div class="col-lg-12 col-md-12 mini-description" id="mision" style="display: block;">
-                    <?php echo $db->mision; ?>
-                </div>
-                <div class="col-lg-12 col-md-12 mini-description" id="vision">
-                    <?php echo $db->vision; ?>
-                </div>
-                <div class="col-lg-12 col-md-12 mini-description" id="valores">
-                    <?php echo $db->valores; ?>
-                </div>
+                            <?php echo $db->mision; ?>
+                        </div>
+                        <div class="col-lg-12 col-md-12 mini-description" id="vision">
+                            <?php echo $db->vision; ?>
+                        </div>
+                        <div class="col-lg-12 col-md-12 mini-description" id="valores">
+                            <?php echo $db->valores; ?>
+                        </div>
                     </div>
-                    
+
                 </div>
-               
+
             </div>
             <div class="col-lg-2">
                 <img src="<?php bloginfo('template_url'); ?>/images/logo2.png" alt="" style="float: right;"/>
@@ -68,27 +68,42 @@
 <div class="clearfix"></div>     
 <div class="container-fluid franja2">
     <div class="container">
-        <p><?php echo $db->nosotros1; ?></p>
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <?php echo $db->nosotros1; ?>
+            </div>
+            <div class="clearfix"></div>
+                        <?php query_posts(array('post_type' => 'galeria', 'tipo' => 'conocenos', 'posts_per_page' => 4)); ?>
+                        <?php while (have_posts()) {
+                            the_post();
+                            ?>
+                            <div class="col-lg-3 col-md-3">
+                                <img src="<?php echo get_the_post_thumbnail($post_id, array(100, 510)); ?>" alt=""/>
+                            </div>
+
+                        <?php } ?>
+        </div>
     </div>
+    
 </div>
 
 <?php get_footer(); ?>
 <script>
-function show(id){
-    console.log(id);
-    if(id === 'mision'){
-        $('.mini-description').slideUp(500);
-        $('#mision').slideDown(1000);
+    function show(id) {
+        console.log(id);
+        if (id === 'mision') {
+            $('.mini-description').slideUp(500);
+            $('#mision').slideDown(1000);
+        }
+        if (id === 'vision') {
+            $('.mini-description').slideUp(500);
+            $('#vision').slideDown(1000);
+        }
+        if (id === 'valores') {
+            $('.mini-description').slideUp(500);
+            $('#valores').slideDown(1000);
+        }
+
     }
-    if(id === 'vision'){
-        $('.mini-description').slideUp(500);
-        $('#vision').slideDown(1000);
-    }
-      if(id === 'valores'){
-        $('.mini-description').slideUp(500);
-        $('#valores').slideDown(1000);
-    }
-    
-}
 </script>
 <?php wp_footer(); ?>

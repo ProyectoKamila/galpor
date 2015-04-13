@@ -73,7 +73,7 @@ function mt_toplevel_page() {
 
     // header
 
-    echo "<h2>" . __('Informaci&oacute;n') . "</h2>";
+    echo "<h2>" . __('Informaci&oacute;n de la p&aacute;gina de Nosotros') . "</h2>";
 
     // settings form
     ?>
@@ -93,20 +93,11 @@ function mt_toplevel_page() {
                                 'media_buttons' => false,// false para desastivar el botton de subir archivo
                                 'textarea_name' => $name_from, //name del texarea
                                 'textarea_rows' => get_option('default_post_edit_rows', 6),// este es para el alto por lineas del texarea
-//                                'tabindex' => '',
-//                                'editor_css' => '',
-//                                'editor_class' => '',
                                 'teeny' => true,// true para desastivar el more
-//                                'dfw' => false,
-//                                'tinymce' => true,
                                 'quicktags' => false,// false para desastivar las pestañas de (Visual/Texto)
-//                                'drag_drop_upload' => false,
                                 
                                 ); ?>
                             <?php wp_editor($content, $name_from, $setting_editor); ?>
-                            <?php // wp_nonce_field('closedpostboxes', 'closedpostboxesnonce', false); ?>
-                            <?php // wp_nonce_field('meta-box-order', 'meta-box-order-nonce', false); ?>
-                            <?php // debug($settings, false); ?>
                         </div>
                     </div>
                     <p class="description">Texto informativo que estara bajo os banners</p>
@@ -127,20 +118,11 @@ function mt_toplevel_page() {
                                 'media_buttons' => false,// false para desastivar el botton de subir archivo
                                 'textarea_name' => $name_from1, //name del texarea
                                 'textarea_rows' => get_option('default_post_edit_rows', 6),// este es para el alto por lineas del texarea
-//                                'tabindex' => '',
-//                                'editor_css' => '',
-//                                'editor_class' => '',
                                 'teeny' => true,// true para desastivar el more
-//                                'dfw' => false,
-//                                'tinymce' => true,
                                 'quicktags' => false,// false para desastivar las pestañas de (Visual/Texto)
-//                                'drag_drop_upload' => false,
                                 
                                 ); ?>
                             <?php wp_editor($content1, $name_from1, $setting_editor1); ?>
-                            <?php // wp_nonce_field('closedpostboxes', 'closedpostboxesnonce', false); ?>
-                            <?php // wp_nonce_field('meta-box-order', 'meta-box-order-nonce', false); ?>
-                            <?php // debug($settings, false); ?>
                         </div>
                     </div>
                     <p class="description">Texto informativo superior en nosotros</p>
@@ -161,20 +143,11 @@ function mt_toplevel_page() {
                                 'media_buttons' => false,// false para desastivar el botton de subir archivo
                                 'textarea_name' => $name_from11, //name del texarea
                                 'textarea_rows' => get_option('default_post_edit_rows', 6),// este es para el alto por lineas del texarea
-//                                'tabindex' => '',
-//                                'editor_css' => '',
-//                                'editor_class' => '',
                                 'teeny' => true,// true para desastivar el more
-//                                'dfw' => false,
-//                                'tinymce' => true,
                                 'quicktags' => false,// false para desastivar las pestañas de (Visual/Texto)
-//                                'drag_drop_upload' => false,
                                 
                                 ); ?>
                             <?php wp_editor($content11, $name_from11, $setting_editor11); ?>
-                            <?php // wp_nonce_field('closedpostboxes', 'closedpostboxesnonce', false); ?>
-                            <?php // wp_nonce_field('meta-box-order', 'meta-box-order-nonce', false); ?>
-                            <?php // debug($settings, false); ?>
                         </div>
                     </div>
                     <p class="description">Texto informativo Inferior en nosotros</p>
@@ -196,20 +169,11 @@ function mt_toplevel_page() {
                                 'media_buttons' => false,// false para desastivar el botton de subir archivo
                                 'textarea_name' => $name_from2, //name del texarea
                                 'textarea_rows' => get_option('default_post_edit_rows', 6),// este es para el alto por lineas del texarea
-//                                'tabindex' => '',
-//                                'editor_css' => '',
-//                                'editor_class' => '',
                                 'teeny' => true,// true para desastivar el more
-//                                'dfw' => false,
-//                                'tinymce' => true,
                                 'quicktags' => false,// false para desastivar las pestañas de (Visual/Texto)
-//                                'drag_drop_upload' => false,
                                 
                                 ); ?>
                             <?php wp_editor($content2, $name_from2, $setting_editor2); ?>
-                            <?php // wp_nonce_field('closedpostboxes', 'closedpostboxesnonce', false); ?>
-                            <?php // wp_nonce_field('meta-box-order', 'meta-box-order-nonce', false); ?>
-                            <?php // debug($settings, false); ?>
                         </div>
                     </div>
                 </td>
@@ -230,20 +194,11 @@ function mt_toplevel_page() {
                                 'media_buttons' => false,// false para desastivar el botton de subir archivo
                                 'textarea_name' => $name_from3, //name del texarea
                                 'textarea_rows' => get_option('default_post_edit_rows', 6),// este es para el alto por lineas del texarea
-//                                'tabindex' => '',
-//                                'editor_css' => '',
-//                                'editor_class' => '',
                                 'teeny' => true,// true para desastivar el more
-//                                'dfw' => false,
-//                                'tinymce' => true,
                                 'quicktags' => false,// false para desastivar las pestañas de (Visual/Texto)
-//                                'drag_drop_upload' => false,
                                 
                                 ); ?>
                             <?php wp_editor($content3, $name_from3, $setting_editor3); ?>
-                            <?php // wp_nonce_field('closedpostboxes', 'closedpostboxesnonce', false); ?>
-                            <?php // wp_nonce_field('meta-box-order', 'meta-box-order-nonce', false); ?>
-                            <?php // debug($settings, false); ?>
                         </div>
                     </div>
                 </td>
@@ -263,23 +218,29 @@ function mt_toplevel_page() {
                                 'media_buttons' => false,// false para desastivar el botton de subir archivo
                                 'textarea_name' => $name_from4, //name del texarea
                                 'textarea_rows' => get_option('default_post_edit_rows', 6),// este es para el alto por lineas del texarea
-//                                'tabindex' => '',
-//                                'editor_css' => '',
-//                                'editor_class' => '',
                                 'teeny' => true,// true para desastivar el more
-//                                'dfw' => false,
-//                                'tinymce' => true,
                                 'quicktags' => false,// false para desastivar las pestañas de (Visual/Texto)
-//                                'drag_drop_upload' => false,
                                 
                                 ); ?>
                             <?php wp_editor($content4, $name_from4, $setting_editor4); ?>
-                            <?php // wp_nonce_field('closedpostboxes', 'closedpostboxesnonce', false); ?>
-                            <?php // wp_nonce_field('meta-box-order', 'meta-box-order-nonce', false); ?>
-                            <?php // debug($settings, false); ?>
                         </div>
                     </div>
                 </td>
+            </tr>
+            <tr>
+                <th>
+                    <label><?php _e("Galeria:  ", 'menu-test'); ?><a href="<?php echo home_url(''); ?>/wp-admin/post-new.php?post_type=galeria" target="_blank" class="add-new-h2" style="float: right;">Añadir Imagen</a></label>
+                </th>
+                <td>
+                    
+                    <?php query_posts(array('post_type' => 'galeria', 'tipo' => 'conocenos', 'posts_per_page' => 4)); ?>
+                    <?php while (have_posts()) {
+                the_post(); ?>
+                    <?php echo get_the_post_thumbnail($post_id, array(100, 510)); ?>
+                    <?php } ?>
+                    <p class="description">Para agregar las imagenes de galeria en el conocenos ingrese al siguiente enlace <a href="<?php echo home_url(''); ?>/wp-admin/post-new.php?post_type=galeria" target="_blank">Añadir Imgaenes</a> y marque el tipo conocenos</p>
+                </td>
+                    
             </tr>
             
             
