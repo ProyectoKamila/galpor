@@ -20,6 +20,8 @@ include('library/banner.php');
 include('library/imgurl.php');
 //opciones
 include('library/options.php');
+//Excluir una categotia
+include('library/excluir.php');
 ?>
 <?php
 

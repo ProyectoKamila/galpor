@@ -37,8 +37,8 @@
 <section class="recientes nosotros">
     <div class="container">
         <div class="row">
-            <div class="col-lg-2"></div>
-            <div class="col-lg-8 nosotros">
+            <div class="col-lg-2 col-md-2"></div>
+            <div class="col-lg-8 col-md-8 nosotros">
                 <h1>+ NOSOTROS</h1>
                 <div class="container-fluid cabecera">
                     <div class="row ">
@@ -78,7 +78,7 @@
                             the_post();
                             ?>
                             <div class="col-lg-3 col-md-3">
-                                <img src="<?php echo get_the_post_thumbnail($post_id, array(100, 510)); ?>" alt=""/>
+                                <?php echo get_the_post_thumbnail($post_id, array(290, 290)); ?>
                             </div>
 
                         <?php } ?>

@@ -14,10 +14,10 @@ function mt_add_pages() {
     add_menu_page(__('Informaci&oacute;n','menu-test'), __('Informaci&oacute;n','menu-test'), 'manage_options', 'configuraciones', 'mt_toplevel_page' );
 
     // Add a submenu to the custom top-level menu:
-    add_submenu_page('configuraciones', __('Test Sublevel','menu-test'), __('Test Sublevel','menu-test'), 'manage_options', 'sub-page', 'mt_sublevel_page');
-
-    // Add a second submenu to the custom top-level menu:
-    add_submenu_page('configuraciones', __('Test Sublevel 2','menu-test'), __('Test Sublevel 2','menu-test'), 'manage_options', 'sub-page2', 'mt_sublevel_page2');
+//    add_submenu_page('configuraciones', __('Test Sublevel','menu-test'), __('Test Sublevel','menu-test'), 'manage_options', 'sub-page', 'mt_sublevel_page');
+//
+//    // Add a second submenu to the custom top-level menu:
+//    add_submenu_page('configuraciones', __('Test Sublevel 2','menu-test'), __('Test Sublevel 2','menu-test'), 'manage_options', 'sub-page2', 'mt_sublevel_page2');
 }
 
 // mt_toplevel_page() displays the page content for the custom Test Toplevel menu

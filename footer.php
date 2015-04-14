@@ -1,7 +1,30 @@
 <footer>
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 col-md-3 col-lg-offset-3 col-md-offset-3"></div>
+            <div class="col-lg-6 col-md-3 col-lg-offset-3 col-md-offset-3 contmar">
+                <div class="redes col-lg-12 col-md-12">
+                    <ul class="">
+                        <li><a class="facebook" href=""></a></li>
+                        <li><a class="twitter" href=""></a></li>
+                        <li><a class="google" href=""></a></li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-lg-12 col-md-12 nave">
+                    <ul class="nav nav-pills">
+                        <li role="presentation"><a href="<?php echo home_url(''); ?>">INICIO</a></li>
+                        <li role="presentation"><a href="<?php echo home_url('conocenos'); ?>">CONÓCENOS</a></li>
+                        <li role="presentation"><a href="<?php echo home_url('servicios'); ?>">SERVICIOS</a></li>
+                        <li role="presentation"><a href="<?php echo home_url('galeria'); ?>">GALERIA</a></li>
+                        <li role="presentation"><a href="<?php echo home_url('contactanos'); ?>">CONTACTANOS</a></li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-lg-12 col-md-12 copy">
+                    <p>Copyright 2015 www.galpor.com. Todos los derechos reservados.</p>
+                    <p>Desarrollado por <a href="http://www.proyectokamila.com">Proyecto Kamila</a></p>
+                </div>
+            </div>
             <div class="col-lg-3 col-md-3">
                 <div class="formulario">
                     <p>¿Quieres contactarnos? <br>  Envíenos sus dudas ó sugerencias</p>

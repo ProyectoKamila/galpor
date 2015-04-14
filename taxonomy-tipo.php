@@ -69,8 +69,9 @@
                     <div class="row">
                         <?php
                         $i = 1;
-                        $var = query_posts(array('post_type' => 'galeria', 'posts_per_page' => 9, 'tipo' => 'portafolio'));
+//                        $var = query_posts(array('post_type' => 'galeria', 'posts_per_page' => 9, 'tipo' => 'seniat'));
                         ?>
+                        <?php wp_reset_query(); ?>
                         <?php
                         while (have_posts()) {
                             the_post();
