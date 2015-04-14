@@ -20,7 +20,7 @@
                             <img src="<?php bloginfo('template_url'); ?>/images/logo2.png" alt="">
                         </div>
                         <div class="col-lg-8 col-md-8">
-                            <h3><?php echo $db->slogan; ?></h3>
+                            <h3><?php echo $db->slogan; wp_reset_query();?></h3>
                         </div>
                     </div>
                 </div>
@@ -42,35 +42,38 @@
         <?php } ?>
         </div>
     </div>
-    <?php } ?>
+    <?php } wp_reset_query(); ?>
     <article class="info-servicios">
     <div class="container">
         <div class="row">
+            
+                
+            
             <div class="col-lg-7 col-md-7">
-                <h1 class="title">DISFRUTE DE NUESTROS SERVICIOS</h1>
-                <p>Nuestras cuatro divisiones sectoriales generan una amplia gama de productos los cuales comprenden desde la fabricación de antenas parabólicas, torres y accesorios para telecomunicaciones, hasta casas rodantes para oficinas o viviendas.</p>
-                <ul>
-                     <li> Lorem Ipsum es simplemente el texto de relleno de las imprentas y </li>
-                     <li> Lorem Ipsum es simplemente el texto de relleno de las imprentas y </li>
-                     <li> Lorem Ipsum es simplemente el texto de relleno de las imprentas y </li>
-                     <li> Lorem Ipsum es simplemente el texto de relleno de las imprentas y </li>
-                     <li> Lorem Ipsum es simplemente el texto de relleno de las imprentas y </li>
-                     <li> Lorem Ipsum es simplemente el texto de relleno de las imprentas y </li>
-                </ul>
-                <p> Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500
-                <p> Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500
-                <br/>
-                <br/>
-                <br/>
-                </p>
+                <?php while (have_posts()) { the_post();?>
+                <h1 class="title"><?php the_title(); ?></h1>
+                    <?php the_content(); ?>
+                <?php }wp_reset_query(); ?>
             </div>
             <div class="col-lg-5 col-md-5"> 
                 <h1 class="title">DIVISIONES</h1>
                 <div class="divisiones-items">
-                    <section class="item" onclick="">
-                        
+                    <?php 
+                        $x=0;
+                        query_posts(array('post_type'=>'servicios','posts_per_page'=>-1));
+                     ?> 
+                     <?php while (have_posts()) { the_post();?>
+                    <section  id="<?php echo $x; ?>" class="item" onclick="desplegar(this.id);">
+                        <div class="icono">
+                            <?php $img = get_field('icono_de_servicio'); ?>
+                            <img src="<?php echo $img[url]?>" alt="Iconos de servicios"/>
+                        </div>
+                        <?php the_title();?>
                     </section>
-
+                    <article class="telecomunicaciones des-item <?php echo $x; ?>">
+                        <a href="<?php the_permalink(); ?>"><p><?php echo max_charlength(get_the_content(), '300', '...');?></p></a>
+                    </article>
+                    <?php $x++; } wp_reset_query(); ?>
                 </div>
             </div>
         </div>
@@ -79,7 +82,15 @@
 </section>
 
 <div class="clearfix"></div>
-
+<script>
+    function desplegar(id){
+        console.log(id);
+        $('.item').removeClass('active');
+        $('.des-item').removeClass('open');
+        $('#'+id).addClass('active');
+        $('.'+id).addClass('open');
+    }
+</script>
 
 <?php get_footer(); ?>
 

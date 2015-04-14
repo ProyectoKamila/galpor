@@ -60,4 +60,8 @@ function theme_custom_types() {
         'post_type' => 'banner',
         'hierarchical' => true
     ));
+    add_custom_post_type(array(
+        'type' => 'servicios',
+        'singular' => 'servicio'
+    ));
 }
