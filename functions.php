@@ -22,6 +22,8 @@ include('library/imgurl.php');
 include('library/options.php');
 //Excluir una categotia
 include('library/excluir.php');
+//Traer imagenes de galeria
+include('library/galeria_imagenes'):
 ?>
 <?php
 
