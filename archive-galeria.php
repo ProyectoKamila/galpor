@@ -10,7 +10,6 @@
         </div>
     </div>
 </div>
-
 <div id="slogan">
     <div class="container">
         <div class="row">
@@ -40,6 +39,9 @@
                 <ul class="nav nav-pills">
                     <?php
                     $idcat = get_term_by('name', 'portafolio', 'tipo');
+                    if($idcat == false){
+                        
+                    }else{
                     $counter = 0;
                     $max = 13;
                     $terms = get_terms('tipo', array('order' => 'rand', 'parent' => $idcat->term_id));
@@ -61,6 +63,7 @@
                             </li>
                                       <?php }
                                             }
+                    }
                                             ?>
                 </ul>
             </div>
@@ -71,6 +74,9 @@
                         <?php
                         $i = 1;
                         $var = query_posts(array('post_type' => 'galeria', 'posts_per_page' => 9, 'tipo' => 'portafolio'));
+                        if($var == null){
+                           echo 'EL tipo "Portafolio", no existe en la galeria. <br> Entrar en la galeria y agregue el tipo con nombre portafolio con sus hijos respectivamente.';
+                        }
                         ?>
                         <?php
                         while (have_posts()) {
