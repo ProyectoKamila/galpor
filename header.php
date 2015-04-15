@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title><?php wp_title(); ?></title>
 	<link href='<?php bloginfo('stylesheet_url'); ?>' rel='stylesheet' type='text/css'> 
+	<link href='<?php bloginfo('template_url'); ?>/css/main.css' rel='stylesheet' type='text/css'> 
 	<?php wp_head(); ?>
 </head>
 <body>
@@ -22,7 +23,7 @@
 
 			<div class="col-lg-8 col-md-8 col-lg-offset-4 col-md-offset-4">
 				<ul class="nav nav-pills">
-  					<li role="presentation" class="active"><a href="<?php echo home_url(''); ?>">INICIO</a></li>
+  					<li role="presentation"><a href="<?php echo home_url(''); ?>">INICIO</a></li>
   					<li role="presentation"><a href="<?php echo home_url('conocenos'); ?>">CONÓCENOS</a></li>
   					<li role="presentation"><a href="<?php echo home_url('servicios'); ?>">SERVICIOS</a></li>
   					<li role="presentation"><a href="<?php echo home_url('galeria'); ?>">GALERIA</a></li>

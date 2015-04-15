@@ -1,5 +1,5 @@
 <?php get_header(''); ?>
-
+<div id="stoy" data-url="index"></div>
 
 <div class="container-fluid content-slider">
     <div class="row">
@@ -70,7 +70,7 @@
 $i = 1;
 		array(
 			'field' => 'id',
-    )   
+    )   ;
 $var = query_posts(array('post_type' => 'galeria','posts_per_page' => 9, 'tipo' => 'portafolio'));
 ?>
             <?php while (have_posts()) {

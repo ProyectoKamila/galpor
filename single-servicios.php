@@ -1,5 +1,6 @@
 <?php $db = select_pkconfig('mt_pkconfig'); ?>
 <?php get_header(''); ?>
+<div id="stoy" data-url="servicios"></div>
 <div class="container-fluid content-slider">
     <div class="row">
         <div class="col-lg-12 col-md-12">

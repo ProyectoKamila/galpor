@@ -4,9 +4,19 @@
             <div class="col-lg-6 col-md-3 col-lg-offset-3 col-md-offset-3 contmar">
                 <div class="redes col-lg-12 col-md-12">
                     <ul class="">
-                        <li><a class="facebook" href=""></a></li>
-                        <li><a class="twitter" href=""></a></li>
-                        <li><a class="google" href=""></a></li>
+                        <?php $c = query_posts(array('post_type' => 'page','post_name'=>'contactanos'));                        ?>
+                        <?php if(!empty($c)){?>
+                            <?php while(have_posts()){ the_post()?>
+                                <li>
+                                                                     <?php $f= get_field('facebook'); 
+                                if(!empty($f)){?>
+                                <li><a class="facebook" href="<?php echo get_field('facebook'); ?>"></a></li>
+                                <?php } ?>
+                                </li>
+                                <li><a class="twitter" href="<?php echo get_field('twitter'); ?>"></a></li>
+                                <li><a class="google" href="<?php echo get_field('google'); ?>"></a></li>
+                            <?php } ?>
+                        <?php } ?>
                     </ul>
                 </div>
                 <div class="clearfix"></div>
@@ -47,6 +57,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/scripts/slider/css/anythingslider.css">
 <script src="<?php bloginfo('template_url'); ?>/scripts/slider/js/jquery.anythingslider.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/scripts/main.js"></script>
 <script type="text/javascript" language="javascript" src="<?php bloginfo('template_url'); ?>/scripts/carrusel/jquery.carouFredSel-6.2.1-packed.js"></script>
 <script>
     $('#slider1').anythingSlider({
