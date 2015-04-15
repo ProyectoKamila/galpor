@@ -72,38 +72,30 @@
                 <div class="container-fluid galery">
                     <div class="row">
                         <?php
-                        $i = 1;
                         $var = query_posts(array('post_type' => 'galeria', 'posts_per_page' => 9, 'tipo' => 'portafolio'));
                         if($var == null){
                            echo 'EL tipo "Portafolio", no existe en la galeria. <br> Entrar en la galeria y agregue el tipo con nombre portafolio con sus hijos respectivamente.';
-                        }
+                        }  else {
+                            
+
                         ?>
                         <?php
                         while (have_posts()) {
                             the_post();
+                            if(get_the_post_thumbnail($post_id, array(380, 510))!=null){
                             ?>
                             <div class="col-lg-3 col-md-3">
-                                <div class="item 
-                                     <?php if ($i === 1) { ?> alto-1 <?php } ?> 
-                                     <?php if ($i === 2) { ?> alto-1 <?php } ?> 
-                                     <?php if ($i === 3) { ?> alto-1 <?php } ?> 
-                                     <?php if ($i === 4) { ?> alto-2 <?php } ?>
-                                     <?php if ($i === 5) { ?> alto-1 <?php } ?>
-                                     <?php if ($i === 6) { ?> alto-2 <?php } ?>
-    <?php if ($i === 7) { ?> alto-3 <?php } ?>
-                                        <?php if ($i === 8) { ?> alto-4 <?php } ?>
-                                        <?php if ($i === 9) { ?> alto-3 <?php } ?>
-                                     ">
+                                <div class="item">
                                     <a href="<?php the_permalink(); ?>">
                             <?php echo get_the_post_thumbnail($post_id, array(380, 510)); ?>
                                     </a>
                                 </div>
                             </div>
                             <?php
-                            $i++;
+                        }
+                        }
                         }
                         ?>
-                        <!--<div class="col-lg-3"></div>-->
                     </div>
                 </div>
 

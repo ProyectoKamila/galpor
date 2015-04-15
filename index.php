@@ -71,7 +71,9 @@ $i = 1;
 $var = query_posts(array('post_type' => 'galeria','posts_per_page' => 9, 'tipo' => 'portafolio'));
 ?>
             <?php while (have_posts()) {
-                the_post(); ?>
+                the_post();
+                if(get_the_post_thumbnail($post_id, array(380, 510))!=null){
+                ?>
                 <div class="col-lg-4 col-md-4">
                     <div class="item 
                          <?php if ($i === 1) { ?> alto-1 <?php } ?> 
@@ -90,7 +92,9 @@ $var = query_posts(array('post_type' => 'galeria','posts_per_page' => 9, 'tipo' 
                     </div>
                 </div>
                 <?php $i++;
-            } ?>
+            }
+            }
+            ?>
 
         </div>
     </div>

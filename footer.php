@@ -4,17 +4,22 @@
             <div class="col-lg-6 col-md-3 col-lg-offset-3 col-md-offset-3 contmar">
                 <div class="redes col-lg-12 col-md-12">
                     <ul class="">
-                        <?php $c = query_posts(array('post_type' => 'page','post_name'=>'contactanos'));                        ?>
+                        <?php $c = query_posts(array('post_type' => 'page','post_name'=>'contactanos', 'posts_per_page' => 1));                        ?>
                         <?php if(!empty($c)){?>
                             <?php while(have_posts()){ the_post()?>
-                                <li>
-                                                                     <?php $f= get_field('facebook'); 
+                                                                     <?php 
+                                                                     $f= get_field('facebook'); 
+                                                                     $t= get_field('twitter'); 
+                                                                     $g= get_field('google'); 
                                 if(!empty($f)){?>
                                 <li><a class="facebook" href="<?php echo get_field('facebook'); ?>"></a></li>
                                 <?php } ?>
-                                </li>
+                                <?php if(!empty($t)){?>
                                 <li><a class="twitter" href="<?php echo get_field('twitter'); ?>"></a></li>
+                                <?php } ?>
+                                <?php if(!empty($g)){?>
                                 <li><a class="google" href="<?php echo get_field('google'); ?>"></a></li>
+                            <?php } ?>
                             <?php } ?>
                         <?php } ?>
                     </ul>
